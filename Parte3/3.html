@@ -20,7 +20,14 @@ Funciones 1 -  Crea una funcion llamada "mayusculas" que:
 
 // CREA TU FUNCION MAYUSCULAS aqui:
 
-
+function mayusculas (nombres){
+    if (typeof(nombres) === "string"){
+        console.log(nombres.toUpperCase());
+    } else {
+        console.log("Not a String");
+    }
+    
+}
 
 
 /*
@@ -35,7 +42,14 @@ Funciones 2 -  Crea una funcion llamada "calculateDogAge" que:
 
 // CREA TU FUNCION calculateDogAge aqui:
 
-
+function calculateDogAge(edad)
+{
+    if (!isNaN(edad)){
+        console.log(String(edad*7));
+    } else {
+        console.log("Not a number");
+    }
+}
 
 
 
@@ -62,11 +76,27 @@ fahrenheitToCelsius(95) --> 35
 
 
 
-
 // CREA TUS FUNCIONES  aqui:
 
 
 
+function celsiusToFahrenheit(celsius){
+    if (!isNaN(celsius)){
+        fahrenheit = (celsius * 1.8) + 32;
+        console.log(String(fahrenheit));
+    } else {
+        console.log("Not a number");
+    }
+}
+
+function fahrenheitToCelsius(fahrenheit){
+    if (!isNaN(fahrenheit)){
+        celsius = (fahrenheit - 32) / 1.8;
+        console.log(String(celsius));
+    } else {
+        console.log("Not a number");
+    }
+}
 
 
 
@@ -85,7 +115,15 @@ C) Con un console.log escribe el nombre del primer objeto, el color del segundo,
 
 
 */
+function perro (Nombre, Color, Raza){
+    this.nombre = Nombre;
+    this.color = Color;
+    this.raza = Raza;
+}
 
+var perro1 = new perro("Darky", "Negro", "Schnauzer");
+var perro2 = new perro("Kibi", "Beige", "Pug");
+var perro3 = new perro("Simona", "Cafe", "Pitbull")
 
 
 /***
@@ -93,7 +131,7 @@ C) Con un console.log escribe el nombre del primer objeto, el color del segundo,
  *        PRUEBA TUS FUNCIONES
  * 
  ***/
-
+nombres = "Francisco"
 
 mayusculas(nombres);
 calculateDogAge(4);
@@ -101,14 +139,16 @@ celsiusToFahrenheit(35)
 fahrenheitToCelsius(95)
 
 
-
-
-
 /***
  * 
  *        PRUEBA TUS OBJETOS AQUI
  * 
  ***/
+
+ console.log(perro1.nombre);
+ console.log(perro2.color);
+ console.log(perro3.raza);
+
 
 
 </script>
