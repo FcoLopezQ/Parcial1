@@ -1,0 +1,32 @@
+img {
+    width: 50%;
+    border-style: double;
+    border-width: 5px;
+    margin: auto;
+    display: flex;
+    align-self: center;
+}
+
+h1,h3 {
+    text-align: center;
+}
+
+#quote {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium';
+}
+
+span{
+    font-weight: bold;
+}
+
+html {
+    background-color: burlywood;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+
