@@ -21,11 +21,11 @@ Funciones 1 -  Crea una funcion llamada "mayusculas" que:
 // CREA TU FUNCION MAYUSCULAS aqui:
 
 function mayusculas (nombres){
-    if (typeof(nombres) === "string"){
-        console.log(nombres.toUpperCase());
-    } else {
-        console.log("Not a String");
-    }
+
+    nombres.forEach( function(nombre) {
+        console.log(nombre.toUpperCase());
+    });
+
     
 }
 
@@ -45,7 +45,7 @@ Funciones 2 -  Crea una funcion llamada "calculateDogAge" que:
 function calculateDogAge(edad)
 {
     if (!isNaN(edad)){
-        console.log(String(edad*7));
+        console.log("Tu perro tiene " + String(edad*7) + " años perro");
     } else {
         console.log("Not a number");
     }
@@ -82,7 +82,7 @@ fahrenheitToCelsius(95) --> 35
 
 function celsiusToFahrenheit(celsius){
     if (!isNaN(celsius)){
-        fahrenheit = (celsius * 1.8) + 32;
+        fahrenheit = Math.round((celsius * 1.8) + 32);
         console.log(String(fahrenheit));
     } else {
         console.log("Not a number");
@@ -91,7 +91,7 @@ function celsiusToFahrenheit(celsius){
 
 function fahrenheitToCelsius(fahrenheit){
     if (!isNaN(fahrenheit)){
-        celsius = (fahrenheit - 32) / 1.8;
+        celsius = Math.round((fahrenheit - 32) / 1.8);
         console.log(String(celsius));
     } else {
         console.log("Not a number");
@@ -131,8 +131,6 @@ var perro3 = new perro("Simona", "Cafe", "Pitbull")
  *        PRUEBA TUS FUNCIONES
  * 
  ***/
-nombres = "Francisco"
-
 mayusculas(nombres);
 calculateDogAge(4);
 celsiusToFahrenheit(35)
